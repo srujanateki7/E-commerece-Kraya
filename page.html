@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRAYA WEBSITE</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- DESTOP VIEW HEADER -->
+
+        <div class="main-header">
+            <div class="header-top-box">
+                <div class="header-top-nav-list">
+                    <div class="header-top-nav">
+                        <span class="wishlist">wishlist </span>
+                        <i id="heart-count" class="fa-regular fa-heart"></i>
+                        <span id="heart-num">0</span>
+                        <i id="line" class="fa fa-thin fa-minus fa-rotate-90"></i>
+                    </div>
+
+                    <div class="header-top-nav">
+                        <span class="cart">cart </span>
+                        <i class="fa fa-light fa-bag-shopping"></i>
+                        <span id="cart-num">0</span>
+                        <i id="line-two" class="fa fa-thin fa-minus fa-rotate-90"></i>
+                    </div>
+
+                    <div class="header-top-nav">
+                        <i id="user" class="fa-regular fa-user"></i>
+                        <span class="user-name">srujana teki</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-logo-list-items">
+                <div class="header-logo">
+                    <a href="#KRAYA">
+                        <img src="./Icon/Kraya_logo.svg" alt="KRAYA Image">
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul class="list-items">
+                        <li><a href="#">phone</a></li>
+                        <li><a href="#">television</a></li>
+                        <li><a href="#">refrigerator</a></li>
+                        <li><a href="#">laptop</a></li>
+                        <li><a href="#">washing machine</a></li>
+                        <li><a href="#">downloads</a></li>
+                    </ul>
+                </nav>
+                <div class="search-icon">
+                    <input id="search-text" placeholder="Search for Products  ">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE VIEW HEADER -->
+
+        <div class="header">
+            <div class="header-top">
+                <div>
+                    <i class="fa fa-sharp fa-light fa-phone"><span class="help-text">&nbsp;NEED HELP ?</span> </i>
+                </div>
+                <div class="header-signin-sec">
+                    <i class="fa-regular fa-user"></i>
+                    <a href="#">Sign In</a>
+                    <i id="heart-icon" class="fa-regular fa-heart"></i>
+                    <span id="heartnum">0</span>
+                    <i class="fa fa-light fa-cart-shopping"></i>
+                    <span id="cart-number">0</span>
+                </div>
+            </div>
+
+            <div class="logo-searchbar">
+                <a href="#KRAYA">
+                    <img src="./Icon/Kraya_logo.svg" alt="KRAYA Image">
+                </a>
+                <div class="search-box">
+                    <input id="search-box-text" placeholder="Search for Products &#128269;">
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DESKTOP VIEW -->
+
+    <section class="mid-container-left">
+
+        <aside>
+            <form action="">
+                <div class="aside-top">
+                    <h4 class="home-text">HOME / MOBILES</h4>
+                </div>
+                <div class="filter-container">
+                    <div class="filter-container-sub-sec">
+                        <h4 class="filter-text">filters</h4>
+                        <h4 class="clear-sec">clear all</h4>
+                    </div>
+
+                    <!-- PRICE FILTER -->
+
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4>Price</h4>
+                            </div>
+                            <div>
+                                <i class="fa fa-thin fa-angle-down"></i>
+                            </div>
+                        </summary>
+                        <div>
+
+                            <input type="text" id="amount">
+                        </div>
+
+                        <div id="slider-range"></div>
+                        <div id="min-max">
+                            <div id="min-amount"></div>
+                            <div id="max-amount"></div>
+                        </div>
+
+                    </details>
+
+                    <!-- BRAND FILTER -->
+
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4>Brand</h4>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+                        <div class="brand-sub-sec">
+                            <li data-filter="Apple"> <input name="Apple" type="checkbox" class="mobileBrands">
+                                <label for="Apple"> Apple</label>
+                            </li>
+                            <li data-filter="Asus"> <input name="Asus" type="checkbox" class="mobileBrands"> <label
+                                    for="Asus"> Asus</label></li>
+                            <li data-filter="Lenovo"> <input name="Lenovo" type="checkbox" class="mobileBrands">
+                                <label for="Lenovo"> Lenovo</label>
+                            </li>
+                            <li data-filter="Xioaomi"> <input name="MI" type="checkbox" class="mobileBrands"> <label
+                                    for="Mi"> MI</label></li>
+                            <li data-filter="Sony"> <input name="Sony" type="checkbox" class="mobileBrands"> <label
+                                    for="Sony"> Sony</label></li>
+                            <li data-filter="LG"> <input name="LG" type="checkbox" class="mobileBrands"> <label
+                                    for="LG">LG</label></li>
+                            <li data-filter="Honor"> <input name="Honor" type="checkbox" class="mobileBrands">
+                                <label for="Honor"> Honor</label>
+                            </li>
+                            <li data-filter="Meizu"> <input name="Meizu" type="checkbox" class="mobileBrands">
+                                <label for="Meizu"> Meizu</label>
+                            </li>
+                            <span class="showmore-text"> + Show More</span>
+                        </div>
+
+                    </details>
+
+                    <!-- BATTERY CAPACITY FILTER -->
+
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4>Battery Capacity</h4>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+                        <div class="sub-sec">
+                            <ul>
+                                <li> <input type="checkbox" id="scapacity"> <label for="scapacity">1500-2000
+                                        mAh</label></li>
+                                <li> <input type="checkbox" id="mcapacity"> <label for="mcapacity">2000-3500
+                                        mAh</label></li>
+                                <li> <input type="checkbox" id="lcapacity"> <label for="lcapacity">3500-4000
+                                        mAh</label></li>
+                                <li> <input type="checkbox" id="xlargecapacity"> <label for="xlcapacity">3000-6000
+                                        mAh</label></li>
+                            </ul>
+                        </div>
+                    </details>
+
+
+                    <!-- SCREEN SIZE -->
+
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4>Screen size</h4>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+                        <div class="sub-sec">
+                            <ul>
+                                <li> <input type="checkbox" id="smallsize"> <label for="smallsize">5.5 inch</label>
+                                </li>
+                                <li> <input type="checkbox" id="middlesize"> <label for="middlesize">6 inch</label>
+                                </li>
+                                <li> <input type="checkbox" id="largesize"> <label for="largesize">6.3 inch</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+
+                    <!-- RAM FILTER -->
+                    <details>
+                        <summary class="filter-container-flex">
+
+                            <div>
+                                <h4>RAM</h4>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+
+                        <div class="sub-sec">
+                            <ul>
+                                <li> <input type="checkbox" id="fourgb"> <label for="fourgb">4 GB</label></li>
+                                <li> <input type="checkbox" id="sixgb"> <label for="sixgb"> 6GB</label></li>
+                                <li> <input type="checkbox" id="eightgb"> <label for="eightgb"> 8 GB</label></li>
+                                <li> <input type="checkbox" id="twelvegb"> <label for="twelvegb"> 12 GB</label></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- CUSTOMER RATINGS -->
+
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4>Customer Ratings</h4>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+                        <div class="sub-sec">
+                            <ul>
+                                <li> <input type="checkbox" id="ratingfour"><i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i></i>
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                </li>
+                                <li> <input type="checkbox" id="ratingthree"> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </li>
+                                <li> <input type="checkbox" id="ratingtwo"> <i class="fa-solid fa-star"></i> <i
+                                        class="fa-solid fa-star"></i></li>
+                                <li> <input type="checkbox" id="ratingone"> <i class="fa-solid fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- CAMERA FILTER -->
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4>Camera</h4>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+                        <div class="sub-sec">
+                            <ul>
+                                <li> <input type="checkbox" id="dualcamer"> <label for="dualcamera"> Dual
+                                        Camera</label></li>
+                                <li> <input type="checkbox" id="triplecamer"> <label for="triplecamera">Triple
+                                        Camera</label></li>
+                                <li> <input type="checkbox" id="quadcamera"> <label for="quadcamera"> Quad
+                                        Camera</label></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- RESOULTION TYPE FILTER -->
+
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4>Resoultion type</h4>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+
+                        <div class="sub-sec">
+                            <ul>
+                                <li> <input type="checkbox" id="HD"> <label for="HD"> HD (720px * 1280px)</label>
+                                </li>
+                                <li> <input type="checkbox" id="FHD"> <label for="FHD">Full HD (1080px *
+                                        1920px)</label></li>
+                                <li> <input type="checkbox" id="QHD"> <label for="QHD"> QuadHD (1440px *
+                                        2560px)</label></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- OS FILTER -->
+
+                    <details>
+                        <summary class="filter-container-flex">
+                            <div>
+                                <h4> Operating System</h4>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </summary>
+
+                        <div class="sub-sec">
+                            <ul>
+                                <li> <input type="checkbox" id="iOS"> <label for="iOS"> iOS</label></li>
+                                <li> <input type="checkbox" id="Microsoft"> <label for="Microsoft">
+                                        Microsoft</label></li>
+                                <li> <input type="checkbox" id="Android"> <label for="Android"> Android</label></li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                </div>
+            </form>
+        </aside>
+
+        <!-- RIGHT SECTION -->
+        <section class="section-right">
+            <div class=result>
+                <div class="showing-results-text">
+                    <span class="display-result-text">Showing results for “Phone”</span>
+                </div>
+                <div class="sorting-links">
+                    <span class="sortby">Sort By</span>
+                    <button type="button" tabindex="1" id="ratingfilter">Ratings</button>
+                    <button type="button" tabindex="1" id="priceLowToHigh">Price low-High</button>
+                    <button type="button" id="newest-first" tabindex="1" type="button">Newest First</button>
+                </div>
+            </div>
+
+            <!-- MOBILE VIEW -->
+            <div class="mid-container-button">
+                <button type="button" class="container-button-one"> <i class="fa-solid fa-sort"></i>SORT BY</button>
+                <button type="button" class="container-button-one"> <i class="fa-solid fa-filter"></i>FILTERS</button>
+            </div>
+            <span class="results-container">
+                <span class="res">Showing results for "Phone"</span>
+            </span>
+
+
+            <!-- PRODUCT TILE SECTION -->
+            <div class="middle-container" id="elements">
+                <!-- <div class="product-tiles">
+                    <div class="sticker-icon">
+                        <div>
+                            <span id="new">NEW</span>
+                            <span id="sale">SALE</span>
+                        </div>
+                        <div>
+                            <i id="heart-icon" class="fa-regular fa-heart fa-lg"></i>
+                        </div>
+                    </div>
+                    <img src="./Images/Apple _14_pro_max.jpg" alt="mobileimages">
+                    <div class="btns">
+                        <button type="button" onclick="cart()" class="btn">ADD TO CART</button>
+                        <button type="button" class="btn-one">VIEW GALLERY</button>
+                    </div>
+                    <div class="models-text">
+                        <h4 class="product-name">Apple</h4>
+                        <div class="star-icon">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="price-text"><b>$3,499</b> &nbsp;<s class="strike-num">$4,599</s><span class="offer-num"> 20% off </span></p>
+                        <div class="circle">
+                            <span class="circle_one"></span>
+                            <span class="circle_two"></span>
+                            <span class="circle_three"></span>       
+                        </div> -->
+            </div>
+            </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+
+        <!-- TOP SECTION IN FOOTER -->
+        <div class="footer-top">
+            <div class="footer-top-left">
+                <div class="footer-text-sec">
+                    <h3>LET'S STAY IN TOUCH</h3>
+                    <span>Get updates on sales specials and more</span>
+                </div>
+                <div class="footer-E-mail-sec">
+                    <input id="e-mail-box" placeholder="Email address">
+                    <button type="button" id="e-mail-box">SUBSCRIBE</button>
+
+                </div>
+            </div>
+
+            <div class="footer-top-right">
+                <div class="follow-text">
+                    <h3>FOLLOW KRAYA.</h3>
+                    <span>We want to hear from you</span>
+                </div>
+
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com"><img class="social-icon" src="./Icon/facebook.png"
+                            alt="facebook-image"></a>
+                    <a href="https://twitter.com/login"><img class="social-icon" src="./Icon/twitter.png"
+                            alt="twitter-image"></a>
+                    <a href="https://www.youtube.com/account"><img class="social-icon" src="./Icon/youtube.png"
+                            alt="youtube-image"></a>
+                    <a href="https://www.instagram.com/accounts/login/"><img class="social-icon"
+                            src="./Icon/instagram.png" alt="instagram-image"></a>
+                </div>
+                <div class="top-icon">
+                    <a href="#"><i id="top-arrow" class="fa-solid fa-angle-up"></i> </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MIDDLE SECTION IN FOOTER -->
+        <div class="footer-middle">
+            <div class="footer-middle-left">
+                <div class="footer-mid-sec">
+                    <ul class="footer-mid-list">
+                        <li>
+                            <h3> ABOUT</h3>
+                        </li>
+                        <li> <a href="#">About Us</a></li>
+                        <li> <a href="#">Careers</a></li>
+                        <li> <a href="#">Blog</a></li>
+                        <li> <a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mid-sec">
+                    <ul class="footer-mid-list">
+                        <li>
+                            <h3>SUPPORT</h3>
+                        </li>
+                        <li> <a href="#">Payment</a></li>
+                        <li> <a href="#">Shipping</a></li>
+                        <li> <a href="#">Cancellation & Returns</a></li>
+                        <li> <a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mid-sec">
+                    <ul class="footer-mid-list">
+                        <li>
+                            <h3>POLICY</h3>
+                        </li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Intellectual Property</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mid-sec">
+                    <h3 class="Mail-us-text">MAIL US</h3>
+                    <span class="address-text">17187 N. Laurel Park Dr., Ste. 110 Livonia, MI 48152 USA</span>
+                </div>
+                <div>
+                    <div class="footer-middle-right">
+                        <div class="servicehours">
+                            <h3>1800 123 4567</h3>
+                            <span>Service hours: 09:00-21:00</span>
+                            <button type="button" class="chat-button">CHAT SUPPORT</button>
+                        </div>
+                        <div class="footer-payment-icons">
+                            <h3 class="payment-text">PAYMENT METHODS</h3>
+                            <div class="footer_icons">
+                                <img class="footer-card" src="./Icons/paypal.png" alt="Paypal" />
+                                <img class="footer-card" src="./Icons/master-card.png" alt="Master_card" />
+                                <img class="footer-card" src="./Icons/visa.png" alt="Visa _card" />
+                                <img class="footer-card" src="./Icons/AE.png" alt="American Express_card" />
+                                <img class="footer-card" src="./Icons/discover.png" alt="Discover_card" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM SECTION IN FOOTER -->
+        <div class="footer-down">
+            <span>Copyright © 2010 - 2018 commerce factory. All Rights Reserved</span>
+        </div>
+
+    </footer>
+
+
+    <!--Script-->
+    <script type="module" src="./kraya.js"></script>
+    <script src="./functions.js"></script>
+    <script src="https://kit.fontawesome.com/76603f0f87.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+
+</body>
+
+</html>
