@@ -1,3 +1,3 @@
 # E-commerece-Kraya
 
-It is a sample website website for mobile phones
+It is a sample website for mobile phones
